@@ -1,0 +1,12 @@
+body {
+  background-color: #fff;
+  font-size: 16px; 
+  color: $defauult;
+  @extend %DMSans-Bold;
+}
+
+.container-fluid {
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

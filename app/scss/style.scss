@@ -3,6 +3,144 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 48px 0 45px;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+  @extend %Rubik-Medium;
+  font-size: 15px;
+  &__list:not(:last-child) {
+    margin-right: 35px;
+  }
+  &__link:hover {
+    padding: 5px 8px;
+    margin: -8px;
+    background-color: #fcd7b6;
+    border-radius: 50px;
+  }
+}
+
+.user {
+  display: flex;
+  &__search, &__menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  &__search {
+    margin-right: 21px;
+    background-color: #edf1f4;
+    position: relative;
+    &-image  {
+      position: absolute;
+      top: 35%;
+      left: 35%;
+    }
+  }
+  &__wish {
+    height: 51px;
+    width: 178px;
+    background-color: #fcd7b6;
+    border-radius: 50px 50px;
+    margin-right: 18px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      left: 89px;
+      top: 9px;
+    }
+    &__like-image, &__cart-image {
+      position: absolute;
+      top: 21px;
+    }
+    &__like-image {
+      left: 41px;
+    }
+    &__cart-image {
+      right: 42px;
+    }
+    &__like-num, &__cart-num {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      top: 13px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 17px;
+      @extend %DMSans-Regular;
+    }
+    &__like-num {
+      left: 52px;
+    }
+    &__cart-num {
+      right: 34px;
+    }
+  }
+  &__menu {
+    position: relative;
+    background-color: $link;
+    &-image {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+    }
+  }
+}
+
+
+
+// &__wish {
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: center;
+//   height: 51px;
+//   width: 178px;
+//   background-color: $background;
+//   border-radius: 50px 50px;
+//   margin-right: 18px;
+//   &__like, &__cart {
+//     height: 17px;
+//     width: 19px;
+//     margin-bottom: 12px;
+//     position: relative;
+//   }
+//   &__like {
+//     margin-right: 56px;
+//   }
+//   &__like-num, &__cart-num {
+//     position: absolute;
+//     top: -10px;
+//     left: 17px;
+//   }
+// }
+// &__menu {
+//   position: relative;
+//   background-color: $link;
+//   &-image {
+//     position: absolute;
+//     top: 30%;
+//     left: 30%;
+//   }
+// }
+
+
+
+
+
+
 
 
 @import 'media';

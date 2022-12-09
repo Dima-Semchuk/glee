@@ -28,7 +28,7 @@ function styles() {
   .pipe(dest('app/css'))
   .pipe(browserSync.stream());
 };
-
+  
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
@@ -62,7 +62,7 @@ function build() {
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'));
-}
+};
 
 function cleanDist() {
   return del('dist')
