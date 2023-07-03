@@ -1,10 +1,14 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
   padding: 48px 0 45px;
+  &__logo{
+    margin-right: 165px;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -14,7 +18,7 @@
 
 .menu {
   display: flex;
-  @extend %Rubik-Medium;
+  @extend %Rubik-500;
   font-size: 15px;
   color: $nav;
   &__list:not(:last-child) {
@@ -23,10 +27,10 @@
   &__link:hover {
     color: $title;
     padding-top: 1px;
-    transition: padding-top .5s;
+    transition: padding-top 0.5s;
   }
   &__link--active {
-    color: red;
+    color: $title;
   }
 }
 
@@ -44,14 +48,15 @@
   }
   &__search-image  {
     position: absolute;
-    top: 35%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &__wish {
     height: 51px;
     width: 178px;
     background-color: #fcd7b6;
-    border-radius: 50px 50px;
+    border-radius: 50px;
     margin-right: 18px;
     position: relative;
     &::after {
@@ -84,7 +89,7 @@
     text-align: center;
     font-size: 10px;
     line-height: 17px;
-    @extend %DMSans-Regular;
+    @extend %DMSans-400;
   }
   &__like-num {
     left: 52px;
@@ -98,13 +103,14 @@
   }
   &__menu-image {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .footer {
-  @extend %Rubik-Regular;
+  @extend %Rubik-400;
   font-size: 14px;
   color: #7b7b7b;
 }
@@ -132,7 +138,7 @@
     line-height: 1.7;
   }
   &__title {
-    @extend %DMSans-Bold;
+    @extend %DMSans-700;
     text-transform: uppercase;
     color: #1f2044;
     font-size: 16px;
@@ -162,7 +168,7 @@
     height: 38px;
     color: #234969;
     font-size: 12px;
-    @extend %DMSans-Regular;
+    @extend %DMSans-400;
     &::placeholder {
       color: #234969;
     }
@@ -171,8 +177,8 @@
     border: none;
     background-color: $link;
     color: #fff;
-    padding: 10px 16px 11px;
-    @extend %DMSans-Regular;
+    padding: 10px 20px 11px 15px;
+    @extend %DMSans-400;
     cursor: pointer;
     transition: background-color 0.3s;
     &:hover {
@@ -204,6 +210,89 @@
     }
   }
 }
+
+.trendy-item {
+  background-color: #fcd7b6;
+  overflow: hidden;
+  &__list  {
+    min-height: 820px;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__inner {
+    padding-bottom: 70px;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @extend %DMSans-700;
+    font-size: 72px;
+    line-height: 1.0;
+    max-width: 470px;
+  }
+  &__text {
+    @extend %Rubik-400;
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 40px;
+  }
+  &__link {
+    @extend %link;
+    padding: 23px 100px 21px 27px;
+  }
+  &__furniture {
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/ellipse.png);
+      width: 634px;
+      height: 634px;
+      background-repeat: no-repeat;
+      background-position: right;
+      top: 50%;
+      left: calc(48% - 185px);
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+.trendy .slick-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  li {
+    padding: 0 5px;
+  }
+  button {
+    width: 30px;
+    height: 30px;
+    background-color: #fde3cc;
+    color: #667983;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    @extend %Rubik-500;
+    font-size: 11px;
+    line-height: 1;
+    opacity: 0.8;
+  }
+  .slick-active button {
+    color: $defauult;
+    background-color: #fff;
+    opacity: 1;
+  }
+}
+
 
 
 

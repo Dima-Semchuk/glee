@@ -3,31 +3,56 @@ $title: #191919;
 $nav: #436372;
 $link: #a3bbc8;
 
-%DMSans-Bold {
-  font-family: 'DM Sans Bold', sans-serif;
+%DMSans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
 }
 
-%DMSans-Medium {
-  font-family: 'DM Sans Medium', sans-serif;
+%DMSans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
   font-weight: 500;
 }
 
-%DMSans-Regular {
-  font-family: 'DM Sans Regular', sans-serif;
+%DMSans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
   font-weight: 400;
 }
-%Poppins-Bold {
-  font-family: 'Poppins Bold', sans-serif;
+%Poppins-700 {
+  font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
 
-%Rubik-Medium {
-  font-family: 'Rubik Medium', sans-serif;
+%Rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
 }
 
-%Rubik-Regular {
-  font-family: 'Rubik Regular', sans-serif;
+%Rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
+}
+
+%link {
+    background-color: $link;
+    color: #fff;
+    transition: background-color 0.3s;
+    display: inline-block;
+    position: relative;
+    @extend %Rubik-500;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    &:hover {
+      background-color: $nav;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/button-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 32px;
+      height: 19px;
+      right: 14px;
+    }
 }

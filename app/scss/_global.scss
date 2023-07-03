@@ -10,21 +10,20 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: $defauult;
-  @extend %DMSans-Bold;
+  @extend %DMSans-700;
 }
 
 .main {
   flex-grow: 1;
 }
 
-.container-inner {
-  max-width: 1800px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  &__inner {
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
