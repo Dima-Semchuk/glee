@@ -21,9 +21,32 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  &__inner {
+  &__wrapper {
     max-width: 1800px;
     padding: 0 15px;
     margin: 0 auto;
+  }
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1;
+  color: $title;
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  &__list:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__btn {
+    color: #8b8b8b;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
